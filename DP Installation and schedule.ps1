@@ -1,4 +1,4 @@
-#Connecting to CM Server
+#Connect to CM Site Server
 $SiteCode = "XYZ" # Site code 
 $ProviderMachineName = "ServerName.TEST.COM" # SMS Provider machine name
 $initParams = @{}
@@ -14,7 +14,7 @@ if((Get-PSDrive -Name $SiteCode -PSProvider CMSite -ErrorAction SilentlyContinue
 Set-Location "$($SiteCode):\" @initParams
 
 
-#Install Dp Server
+#Install DP Role
 $readyListForBG=@()
 $DPErrorReport=@()
 $DPList=Get-Content "C:\SCCMCOPYlist.txt"
